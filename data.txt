@@ -72,7 +72,7 @@ npm install -d 就是npm install --save-dev
 npm insatll -s 就是npm install --save
 
 npm install --save-dev  compression-webpack-plugin
-npm install --save-dev  image-webpack-loader 
+npm install --save-dev  image-webpack-loader
 
 
 经常遇到一个问题，当需要让一张图片和文字在同一水平线上显示市，图片总是会比文字高出一截，可以说非常不好看了。
@@ -84,7 +84,7 @@ img {
 
 
 
-后来查了一下css 发现他有一个属性 
+后来查了一下css 发现他有一个属性
 
 word-break: break-all;它的作用就是：在恰当的断字点进行换行
 
@@ -96,7 +96,7 @@ word-break: break-all;它的作用就是：在恰当的断字点进行换行
            transition 包裹，需要使用 transition-group -->
 
            <!--若需要为 v-for 循环创建的元素设置动画，必须为每一个元素设置 :key 属性-->
- 
+
 
 
 
@@ -142,13 +142,13 @@ function demo (...values) {
   console.log(values)
   console.log('-----------------------')
 }
-demo(1,2,3,4) 
+demo(1,2,3,4)
 
 
 var a = [1,2,3,4,5]
 console.log(...a);
 //结果是:  1 2 3 4 5，相当于遍历了a
- 
+
 var b = [...a]
 console.log(b);
 
@@ -199,6 +199,30 @@ const Foo = _import('Foo');
 
 
 https://blog.csdn.net/louxinuo/article/details/119058495
+https://cloud.tencent.com/developer/article/1410703
+
+module.exports和exports是属于 CommonJS 模块规范，export和export default是属于ES6语法。
+module.exports和exports导出模块，用require引入模块。
+export和export default导出模块，用import导入模块。
+
+export const str = 'hello world'  //变量    import { str, func } from 'demo' //也可以分开写两次，导入的时候带花括号
+export function fuunc(a){ //函数
+    return a+1
+}
+
+export default const str = 'hello world'    import str from 'demo1' //导入的时候没有花括号
+
+（eslint下export不能导出export default const str = 'hello world'
+Only expressions, functions or classes are allowed as the `default` export.
+）（一个js文件下只能有一个export default）
+
+export ...
+export default ...
+通过export方式导出，用import导入时要加{ }，export default则不需要，使用export default命令，为模块指定默认输出，这样就不需要知道所要加载模块的变量名
+用require导出时，export default无法导出，其他的所有export 都可以导出
+
+
+
 exports和module.exports的区别暴露和import的一些区别
 
 
@@ -251,7 +275,7 @@ this.$store.dispatch('personAbout/addPersonWang',personObj)
 
 less的使用
 
-npm install less less-loader 
+npm install less less-loader
 
 
 如果打包报错，则可能是版本过高，执行npm uninstall less-loader     npm install less-loader@4.1.0
@@ -298,13 +322,13 @@ Promise.resolve的值不管是啥，then的时候都会把esolve的值返回
 
 链式操作
 Promise.resolve（）.then(res =>{
-     
+
 }).catch(error => {
 
 })
            try {
                 const result = await Promise.resolve（"2"）;
-   
+
                 context.commit('GETAll',result)
             }catch (e) {
                 console.log(e)
