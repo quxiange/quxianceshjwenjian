@@ -1,0 +1,323 @@
+map()数组映射，相当于循环；
+
+
+
+set  map
+
+
+插槽：匿名插槽，具名插槽，作用域插槽（详细解释）；3077960560
+
+
+
+vue父子组件传值，父组件还没拿到数据传递给就传递给子组件了：https://blog.csdn.net/hjjmdcg_/article/details/120328695
+
+
+vue.model.（trim）修饰符：过滤空格
+
+开发环境用proxy，生产环境用nginx反向代理
+
+
+
+1，关于文件名：必须以如下方式命名，不要乱起名，也无需专门手动控制加载哪个文件
+
+　　.env 全局默认配置文件，不论什么环境都会加载合并
+
+　　.env.development 开发环境下的配置文件
+
+　　.env.production 生产环境下的配置文件
+
+2，关于内容
+
+　　注意：属性名必须以VUE_APP_开头，比如VUE_APP_XXX
+
+3，关于文件的加载：
+
+　　根据启动命令vue会自动加载对应的环境，vue是根据文件名进行加载的，所以上面说“不要乱起名，也无需专门控制加载哪个文件”
+
+　　比如执行npm run serve命令，会自动加载.env.development文件
+
+注意：.env文件无论是开发还是生成都会加载的公用文件　
+
+
+
+
+el-dialog底下的组件只会加载一次，需要在外层增加v-if
+
+
+package.json中的开发依赖dependencies和生产依赖devDependencies到底有何区别
+
+
+
+
+vue的hook：this.on/once('hook:生命周期'，callback) @hook:生命周期 = a
+
+
+
+
+vue-draggable-resizable：可改变大小的拖拽
+
+
+devDependencies开发环境；dependencies 生产环境
+
+简单来讲，npm 5.0.0 之前，有 --save 参数才会把模块写入到 packages.json的dependcies。现在版本早就8.x了，已经是内置参数，不用额外写了
+
+在 package.json 文件里面提现出来的区别就是，使用 --save-dev 安装的 插件，被写入到 devDependencies （开发环境）对象里面去，而使用 --save 安装的插件，责被写入到 dependencies （生产环境）对象里面去。
+
+npm install默认安装是从dependencies 的安装
+
+
+
+npm install -d 就是npm install --save-dev
+
+npm insatll -s 就是npm install --save
+
+npm install --save-dev  compression-webpack-plugin
+npm install --save-dev  image-webpack-loader 
+
+
+经常遇到一个问题，当需要让一张图片和文字在同一水平线上显示市，图片总是会比文字高出一截，可以说非常不好看了。
+解决方法：
+img {
+    vertical-align: middle;
+}
+
+
+
+
+后来查了一下css 发现他有一个属性 
+
+word-break: break-all;它的作用就是：在恰当的断字点进行换行
+
+我们知道input标签是一个inline-block元素，也就是一个块元素，而line-height只可以应用于inline行内元素。所以line-height属性的设置对input元素是无效的。我们看下面的代码：
+
+
+
+<!--在实现列表过渡时，如果需要过渡的元素是通过v-for渲染出来的，不能使用
+           transition 包裹，需要使用 transition-group -->
+
+           <!--若需要为 v-for 循环创建的元素设置动画，必须为每一个元素设置 :key 属性-->
+ 
+
+
+
+改变el-main的元素overflow是auto的
+
+
+
+
+import * as xxx from ‘xxx’: 会将若干export导出的内容组合成一个对象返回；
+
+import xxx from ‘xxx’：（export default Din）只会导出这个默认的对象作为一个对象
+
+
+Storybook
+
+
+
+vue treeselect树形选择器使用
+
+npm info webpack查看webpack版本号
+
+
+vue Affix图钉，顶端固定距离不动：https://www.cnblogs.com/shenjp/p/10100837.html
+
+
+组件化思想：https://www.bbsmax.com/A/kvJ3OQQQJg/
+
+
+
+https://www.iviewui.com/components/affix         比element-ui更好的设计插件
+
+
+https://blog.csdn.net/weixin_51962708/article/details/120639914   vue组件通信的几种方式vue-bus和eventBus
+
+
+
+
+...如果是是形参 里面出现，表示的是可变参数,即表示的传入的参数个数是可变，你传多少个参数都被放到一个数组里面。
+而在ES6中，...是扩展运算符，
+扩展运算符可以用来方便的遍历和复制一个数组。
+
+function demo (...values) {
+  console.log(values)
+  console.log('-----------------------')
+}
+demo(1,2,3,4) 
+
+
+var a = [1,2,3,4,5]
+console.log(...a);
+//结果是:  1 2 3 4 5，相当于遍历了a
+ 
+var b = [...a]
+console.log(b);
+
+
+
+使用el-draw做一个面板（el-draw衍生于el-dialog），可是面板外不可点，那这一定是样式的问题了。
+/deep/ .el-drawer__wrapper {
+    width: 400px;
+    .el-drawer__container {
+      width: 400px;
+}
+/deep/ 深层选择器::v-deep  http://www.manongjc.com/detail/17-euyhqjiiwjmiuny.html
+
+
+如果项目使用的是css原生样式，那么可以直接使用 >>> 穿透修改
+
+
+
+
+ssr  vue nuxt.js  SourceMap webpack-bundle-analyzer
+
+
+
+虚拟列表：https://www.csdn.net/tags/MtTaEg1sMDU5NjcwLWJsb2cO0O0O.html
+第三方库
+vue-virtual-scroller、react-tiny-virtual-list、react-virtualized
+
+懒加载vue-lazyload    https://www.cnblogs.com/heitu-k/p/15510225.html
+https://juejin.cn/post/6844903486241374221
+
+关键https://www.jianshu.com/p/87a4fe7bf0b1
+路由懒加载，组件懒加载
+1、vue异步组件实现路由懒加载
+component：resolve=>require(['需要加载的路由的地址'，resolve])
+
+2、es提出的import(推荐使用这种方式)
+const HelloWorld = （）=>import('需要加载的模块地址')
+
+
+
+但是如果你构建的是系统类项目，有上百个路由，这样的话 当你用webpack hot进行代码热更新的时候，速度就会超级慢，此时解决方法就是让他在开发环境下不要懒加载，在生产环境下再进行懒加载。我们首先要定义一个变量
+const _import = require('./_import_' + process.env.NODE_ENV);
+const Foo = _import('Foo');
+
+*_production.js:   module.exports = file => () => import('@/pages/' + file + '.vue')
+
+*_develope.js:   module.exports = file =>  import('@/pages/' + file + '.vue')
+
+
+https://blog.csdn.net/louxinuo/article/details/119058495
+exports和module.exports的区别暴露和import的一些区别
+
+
+
+
+
+
+vColorPicker：颜色调节  npm install vcolorpicker -S
+
+
+
+https://juejin.cn/post/7035905352746926116
+https://juejin.cn/post/6949848530781470733
+https://juejin.cn/post/7031923575044964389
+https://juejin.cn/post/6966179727329460232
+
+
+
+vue.config.js中的productionSourceMap属性
+可以看出，开启productionSourceMap后，浏览器控制台明确的告诉我们test这条结果的输出语句在main.js的20行。这就是source map的作用，对于开发人员差错时非常有用的。
+
+
+mock.js前端模拟假数据
+
+
+this.$store.commit传递多个参数，第一种就是传递递象，第二种就是传递一个数组
+https://blog.csdn.net/hbwhypw/article/details/112577588
+
+在模块化编程中：
+state：
+没有命名模块时：this.$store.state
+有命名模块时:      this.$store.state.personAbout.firstPersonName          ...mapState('countAbout',['sum','school','subject']),
+
+getters：
+没有命名模块时：this.$store.getters
+有命名模块时:      this.$store.getters['personAbout/firstPersonName']   ...mapGetters('countAbout',['sum','school','subject']),
+
+
+this.$store.commit
+...mapMutations(['JIA','JIAN']),
+this.$store.commit('personAbout/ADD_PERSON',personObj)
+...mapMutations('countAbout',{increment:'JIA',decrement:'JIAN'}),
+
+this.$store.dispatch
+...mapActions(['jiaOdd','jiaWait'])
+this.$store.dispatch('personAbout/addPersonWang',personObj)
+...mapActions('countAbout',{incrementOdd:'jiaOdd',incrementWait:'jiaWait'})
+
+
+
+less的使用
+
+npm install less less-loader 
+
+
+如果打包报错，则可能是版本过高，执行npm uninstall less-loader     npm install less-loader@4.1.0
+
+引入全局的less文件
+import '@/assets/common.less';
+在其他地方引用less全局变量:
+npm install style-resources-loader vue-cli-plugin-style-resources-loader
+// 注意路径，不能使用配置中的别名路径（例如：alias 配置下的路径别名）
+
+    pluginOptions: {
+        "style-resources-loader": {
+            preProcessor: "less",
+            patterns: [
+                // 全局变量路径
+                path.resolve(__dirname, "./src/assets/common1.less"),
+            ],
+        },
+    }
+
+
+https://blog.csdn.net/weixin_42306054/article/details/112946634   查看vue中webpack的默认配置
+
+
+
+
+https://www.cnblogs.com/wuhaozhou/archive/2020/11/24/14030540.html
+
+https://www.cnblogs.com/qianxiaox/p/14124551.html
+
+Promise.resolve('foo')
+// 等价于
+new Promise(resolve => resolve('foo'))
+
+let a = Promise.resolve(Promise.resolve(2)).then(res =>{
+
+return res
+
+
+})
+
+a = Promise对象
+Promise.resolve的值不管是啥，then的时候都会把esolve的值返回
+
+链式操作
+Promise.resolve（）.then(res =>{
+     
+}).catch(error => {
+
+})
+           try {
+                const result = await Promise.resolve（"2"）;
+   
+                context.commit('GETAll',result)
+            }catch (e) {
+                console.log(e)
+            }
+
+
+
+
+git 问题：https://blog.csdn.net/m0_51269961/article/details/123709195
+
+https://blog.csdn.net/qq_41646249/article/details/119777084
+
+
+
+
+
