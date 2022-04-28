@@ -103,13 +103,6 @@ word-break: break-all;它的作用就是：在恰当的断字点进行换行
 改变el-main的元素overflow是auto的
 
 
-
-
-import * as xxx from ‘xxx’: 会将若干export导出的内容组合成一个对象返回；
-
-import xxx from ‘xxx’：（export default Din）只会导出这个默认的对象作为一个对象
-
-
 Storybook
 
 
@@ -210,23 +203,33 @@ export function fuunc(a){ //函数
     return a+1
 }
 
-export default const str = 'hello world'    import str from 'demo1' //导入的时候没有花括号
-
+export default const str = 'hello world'（不对）    import str from 'demo1' //导入的时候没有花括号
+const str = 'hello world'  export default str （对）
 （eslint下export不能导出export default const str = 'hello world'
+
 Only expressions, functions or classes are allowed as the `default` export.
 ）（一个js文件下只能有一个export default）
 
 export ...
 export default ...
+
 通过export方式导出，用import导入时要加{ }，export default则不需要，使用export default命令，为模块指定默认输出，这样就不需要知道所要加载模块的变量名
-用require导出时，export default无法导出，其他的所有export 都可以导出
+import * as a from '../src/es6Js/export'        会将所有的暴露全部导出，包括默认
+let a = require('../src/es6Js/export')             用require导出时，会将所有的暴露全部导出，包括默认
 
 
 
 exports和module.exports的区别暴露和import的一些区别
 
+exports是指向module.exports的引用，所以一切以module.exports为准，requie的结果是module.exports
+默认module.exports = exports = {}
 
+import * as a from '../src/es6Js/export'  会将module.exports导出
 
+exports必须exports.xxx
+module.exports可以module.exports = xxx(函数，{}，值都可)，也可以module.exports.xxx
+
+总结：exports和export不能写在同一个js里
 
 
 
