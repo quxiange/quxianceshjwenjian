@@ -191,8 +191,12 @@ const Foo = _import('Foo');
 *_develope.js:   module.exports = file =>  import('@/pages/' + file + '.vue')
 
 
+import('/src/es6Js/export')的返回值是一个promise对象里面有module值
+require('/src/es6Js/export')的返回值是modele值
+
 https://blog.csdn.net/louxinuo/article/details/119058495
 https://cloud.tencent.com/developer/article/1410703
+https://www.jb51.net/article/143925.htm
 
 module.exports和exports是属于 CommonJS 模块规范，export和export default是属于ES6语法。
 module.exports和exports导出模块，用require引入模块。
@@ -202,6 +206,15 @@ export const str = 'hello world'  //变量    import { str, func } from 'demo' /
 export function fuunc(a){ //函数
     return a+1
 }
+
+
+
+
+
+
+
+
+
 
 export default const str = 'hello world'（不对）    import str from 'demo1' //导入的时候没有花括号
 const str = 'hello world'  export default str （对）
@@ -218,6 +231,24 @@ import * as a from '../src/es6Js/export'        会将所有的暴露全部导�
 let a = require('../src/es6Js/export')             用require导出时，会将所有的暴露全部导出，包括默认
 
 
+https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/export#%E8%AF%AD%E6%B3%95
+
+可以这么方便理解: export后面只能跟 “变量、函数、类 等的声明语句”和“简写表达式”以及default语句
+第一种写法: 第一种写法是export 后面跟的是声明语句的“简写表达式”, 和他等价其实是:
+// 导出
+let name = 'lxx'
+let age = 18
+let height = 1.88
+export { name, age, height }
+
+// 报错
+export {
+  name:name,
+  age:age
+}
+
+// 导入
+import { name, age, height } from "./a.js"
 
 exports和module.exports的区别暴露和import的一些区别
 
@@ -344,7 +375,17 @@ git 问题：https://blog.csdn.net/m0_51269961/article/details/123709195
 
 https://blog.csdn.net/qq_41646249/article/details/119777084
 
+https://m.html.cn/web/javascript/11462502002625.html  深拷贝，浅拷贝
 
 
+
+v-draggalbe  https://www.cnblogs.com/sysg/p/15272476.html(关键查询)
+https://blog.csdn.net/weixin_39715907/article/details/111803224
+
+
+
+
+今晚学习：
+https://vuex.vuejs.org/zh/guide/forms.html
 
 
