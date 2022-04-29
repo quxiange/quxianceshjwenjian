@@ -375,6 +375,8 @@ git 问题：https://blog.csdn.net/m0_51269961/article/details/123709195
 
 https://blog.csdn.net/qq_41646249/article/details/119777084
 
+
+
 https://m.html.cn/web/javascript/11462502002625.html  深拷贝，浅拷贝
 
 
@@ -391,4 +393,17 @@ https://vuex.vuejs.org/zh/guide/forms.html
 
 es6
 
+git
+https://www.csdn.net/tags/MtzaUg5sMzE0MC1ibG9n.html
+1.开始菜单搜索“记事本”，右键以管理员身份运行。
+2.在记事本上点击“打开”，并进入路径“C:\Windows\System32\drivers\etc”下。
+更新完hosts值后记得刷新dns
 
+http://tool.chinaz.com/dns/?type=1&host=github.com&ip=  //获取xxxx地址
+
+xxxxxxxxx github.com
+ipconfig /flushdns
+
+自定义工具函数库https://zxfjd3g.github.io/atguigu_utils-docs/chapter2/03_%E5%AF%B9%E8%B1%A1%E7%9B%B8%E5%85%B3.html#_3-5-%E5%AF%B9%E8%B1%A1-%E6%95%B0%E7%BB%84%E6%8B%B7%E8%B4%9D
+
+https://zxfjd3g.github.io/atguigu_utils-docs/chapter2/03_%E5%AF%B9%E8%B1%A1%E7%9B%B8%E5%85%B3.html#_3-5-%E5%AF%B9%E8%B1%A1-%E6%95%B0%E7%BB%84%E6%8B%B7%E8%B4%9D学习
