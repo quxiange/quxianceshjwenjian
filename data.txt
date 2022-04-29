@@ -407,3 +407,19 @@ ipconfig /flushdns
 自定义工具函数库https://zxfjd3g.github.io/atguigu_utils-docs/chapter2/03_%E5%AF%B9%E8%B1%A1%E7%9B%B8%E5%85%B3.html#_3-5-%E5%AF%B9%E8%B1%A1-%E6%95%B0%E7%BB%84%E6%8B%B7%E8%B4%9D
 
 https://zxfjd3g.github.io/atguigu_utils-docs/chapter2/03_%E5%AF%B9%E8%B1%A1%E7%9B%B8%E5%85%B3.html#_3-5-%E5%AF%B9%E8%B1%A1-%E6%95%B0%E7%BB%84%E6%8B%B7%E8%B4%9D学习
+
+学习
+https://www.runoob.com/jsref/jsref-obj-error.html
+
+挺好的
+http://javascript.ruanyifeng.com/nodejs/module.html
+
+
+es6:map  set   promise  等
+
+
+数组所有方法，对象所有方法，字符串方法
+
+
+
+
