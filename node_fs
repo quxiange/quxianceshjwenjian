@@ -1,0 +1,164 @@
+http://nodejs.cn/learn/writing-files-with-nodejs
+Node.js 文件属性
+
+在 Node.js 中使用文件描述符
+在与位于文件系统中的文件进行交互之前，需要先获取文件的描述符。
+文件描述符是使用 fs 模块提供的 open() 方法打开文件后返回的：
+
+fs.open('/Users/joe/test.txt', 'r', (err, fd) => {
+  //fd 是文件描述符。
+})
+注意，将 r 作为 fs.open() 调用的第二个参数。
+
+r 打开文件用于读取。
+r+ 打开文件用于读写。
+w+ 打开文件用于读写，将流定位到文件的开头。如果文件不存在则创建文件。
+a 打开文件用于写入，将流定位到文件的末尾。如果文件不存在则创建文件。
+a+ 打开文件用于读写，将流定位到文件的末尾。如果文件不存在则创建文件。
+
+
+
+使用 fs 模块提供的 stat() 方法
+调用时传入文件的路径，一旦 Node.js 获得文件的详细信息，则会调用传入的回调函数，并带上两个参数：错误消息和文件属性：
+fs.stat('/Users/joe/test.txt', (err, stats) => {
+  if (err) {
+    console.error(err)
+    return
+  }
+  //可以访问 `stats` 中的文件属性
+})
+console.log("ceshi")
+
+Node.js 也提供了同步的方法，该方法会阻塞线程，直到文件属性准备就绪为止
+这个方法会等待执行完，才下一步
+const fs = require('fs')
+try {
+  const stats = fs.statSync('/Users/joe/test.txt')
+} catch (err) {
+  console.error(err)
+}
+console.log("ceshi")
+
+使用 stats.isFile() 和 stats.isDirectory() 判断文件是否目录或文件。
+使用 stats.isSymbolicLink() 判断文件是否符号链接。
+使用 stats.size 获取文件的大小（以字节为单位）。
+  stats.isFile() //true
+  stats.isDirectory() //false
+  stats.isSymbolicLink() //false
+  stats.size //1024000 //= 1MB
+
+Node.js 文件路径
+dirname: 获取文件的父文件夹。
+basename: 获取文件名部分。
+extname: 获取文件的扩展名。
+
+const notes = '/users/joe/notes.txt'
+
+path.dirname(notes) // /users/joe
+path.basename(notes) // notes.txt
+path.extname(notes) // .txt
+
+可以通过为 basename 指定第二个参数来获取不带扩展名的文件名,不要后缀
+path.basename(notes, path.extname(notes)) //notes
+
+
+
+
+
+使用 Node.js 读取文件
+使用 fs 模块提供的 readFile() 方法
+在 Node.js 中读取文件最简单的方式是使用 fs.readFile() 方法，向其传入文件路径、编码、以及会带上文件数据（以及错误）进行调用的回调函数：
+fs.readFile('/Users/joe/test.txt','utf8', (err, data) => {
+  if (err) {
+    console.error(err)
+    return
+  }else{
+    console(data)
+  }
+})
+console.log("ceshi")
+
+另外，也可以使用同步的版本 fs.readFileSync()：，该方法会阻塞线程，直到文件读取准备就绪为止
+这个方法会等待执行完，才下一步
+const fs = require('fs')
+try {
+  const data = fs.readFileSync('/Users/joe/test.txt','utf8')
+} catch (err) {
+  console.error(err)
+}
+console.log("ceshi")
+fs.readFile() 和 fs.readFileSync() 都会在返回数据之前将文件的全部内容读取到内存中。
+这意味着大文件会对内存的消耗和程序执行的速度产生重大的影响。
+
+使用 Node.js 写入文件
+const content = '一些内容'
+
+fs.writeFile('/Users/joe/test.txt', content, err => {
+  if (err) {
+    console.error(err)
+    return
+  }
+  //文件写入成功。
+})
+
+//阻塞线程
+const content = '一些内容'
+try {
+  const data = fs.writeFileSync('/Users/joe/test.txt', content)
+  //文件写入成功。
+} catch (err) {
+  console.error(err)
+}
+
+
+将内容追加到文件末尾的便捷方法是
+fs.appendFile('/Users/joe/test.txt', content, err => {
+  if (err) {
+    console.error(err)
+    return
+  }
+  //文件写入成功。
+})
+//阻塞线程
+const content = '一些内容'
+try {
+  const data = fs.appendFileSync('/Users/joe/test.txt', content)
+  //文件写入成功。
+} catch (err) {
+  console.error(err)
+}
+
+fs.writeFile('/Users/joe/test.txt', content, { flag: 'a+' }, err => {})
+
+
+
+
+可以通过指定标志来修改默认的行为：
+r+ 打开文件用于读写。
+w+ 打开文件用于读写，将流定位到文件的开头。如果文件不存在则创建文件。
+a 打开文件用于写入，将流定位到文件的末尾。如果文件不存在则创建文件。
+a+ 打开文件用于读写，将流定位到文件的末尾。如果文件不存在则创建文件。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+将读文件的方法是 fs.readFile()（及其对应的 fs.readFileSync()）：
+
+将内容写入到文件的方法是 fs.writeFile()（及其对应的 fs.writeFileSync()）：
+将内容追加到文件末尾的便捷方法是 fs.appendFile()（及其对应的 fs.appendFileSync()）：
+都适用以下
+r+ 打开文件用于读写。
+w+ 打开文件用于读写，将流定位到文件的开头。如果文件不存在则创建文件。
+a 打开文件用于写入，将流定位到文件的末尾。如果文件不存在则创建文件。
+a+ 打开文件用于读写，将流定位到文件的末尾。如果文件不存在则创建文件。

@@ -413,6 +413,7 @@ https://www.runoob.com/jsref/jsref-obj-error.html
 
 挺好的
 http://javascript.ruanyifeng.com/nodejs/module.html
+http://nodejs.cn/learn/nodejs-file-stats  官网
 
 
 es6语法:map  set   promise  等
