@@ -415,9 +415,14 @@ https://www.runoob.com/jsref/jsref-obj-error.html
 http://javascript.ruanyifeng.com/nodejs/module.html
 
 
-es6:map  set   promise  等
+es6语法:map  set   promise  等
 
+CommonJS规范
+与es6规范
 
+node.js
+
+基础的js,html,css再过一遍
 数组所有方法，对象所有方法，字符串方法
 
 
