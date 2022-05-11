@@ -432,3 +432,8 @@ node.js
 
 e.use参数为函数（插件为函数）时，函数的参数是Vue对象
 Vue.use参数为对象（插件为对象）时，它提供的install方法中参数是Vue对象
+
+
+
+学习做题网站：https://sslljy.blog.csdn.net/article/details/121356109?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ETopBlog-1-121356109-blog-122851589.topblog&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ETopBlog-1-121356109-blog-122851589.topblog&utm_relevant_index=2
+https://github.com/biaochenxuying/blog/blob/master/interview/fe-interview.md#7-vue
