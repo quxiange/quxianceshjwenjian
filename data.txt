@@ -437,3 +437,14 @@ Vue.use参数为对象（插件为对象）时，它提供的install方法中参
 
 学习做题网站：https://sslljy.blog.csdn.net/article/details/121356109?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ETopBlog-1-121356109-blog-122851589.topblog&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ETopBlog-1-121356109-blog-122851589.topblog&utm_relevant_index=2
 https://github.com/biaochenxuying/blog/blob/master/interview/fe-interview.md#7-vue
+
+
+https://blog.csdn.net/weixin_46468143/article/details/124315221?spm=1001.2101.3001.6650.9&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-9-124315221-blog-123815306.pc_relevant_default&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-9-124315221-blog-123815306.pc_relevant_default&utm_relevant_index=15
+
+VUE 路由守卫 next() / next({ ...to, replace: true }) / next(‘/‘) 说明
+https://blog.csdn.net/qq_41912398/article/details/109231418?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522164879293816782089332412%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=164879293816782089332412&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-109231418.142%5Ev5%5Epc_search_quality_down&utm_term=%E8%B7%AF%E7%94%B1%E5%AE%88%E5%8D%AB%E7%9A%84next&spm=1018.2226.3001.4187
+
+https://blog.csdn.net/yalywq/article/details/123815306
+
+vue的主要试题：
+https://blog.csdn.net/qq_45659769/article/details/119564784
