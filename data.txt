@@ -352,7 +352,7 @@ return res
 })
 
 a = Promise对象
-Promise.resolve的值不管是啥，then的时候都会把esolve的值返回
+Promise.resolve的值不管是啥，then的时候都会把resolve的值返回
 
 链式操作
 Promise.resolve（）.then(res =>{
@@ -451,3 +451,33 @@ https://blog.csdn.net/qq_45659769/article/details/119564784
 
 ue-element-admin：
 https://panjiachen.github.io/vue-element-admin-site/zh/guide/
+
+
+
+CJS - CommonJS
+node.js 制定
+特征：
+- 通过 module + exports 去对外暴露接口
+- 通过 require 来调用其他模块
+
+ES6 模块化
+EcmaScript6 标准增加了JavaScript语言层面的模块体系定义
+新增定义：
+引入关键字 —— import
+导出关键字 —— export
+
+
+动态模块
+
+考察：export promise
+ES11原生解决方案：
+
+import('./esModule.js').then(dynamicEsModule => {
+    dynamicEsModule.increase();
+})
+https://zhuanlan.zhihu.com/p/299658985
+https://www.zhihu.com/people/jian_dan--9521
+https://blog.csdn.net/weixin_56122911/article/details/123001070
+
+
+
