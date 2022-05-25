@@ -480,7 +480,25 @@ https://www.zhihu.com/people/jian_dan--9521
 https://blog.csdn.net/weixin_56122911/article/details/123001070
 http://nodejs.cn/learn/the-package-lock-json-file
 
-22
+node
+
+es6
+
+axios
+
+router
+
+promise
+
+slot
+
+vue
+
+webpack
+
+vue-cli
+
+原生js
 
 
 
